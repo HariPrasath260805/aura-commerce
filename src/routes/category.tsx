@@ -41,7 +41,7 @@ function CategoryPage() {
   }, [products, search, maxPrice]);
 
   const update = (patch: Partial<CategorySearch>) =>
-    navigate({ search: (prev) => ({ ...prev, ...patch }) });
+    navigate({ search: (prev: CategorySearch) => ({ ...prev, ...patch }) });
 
   return (
     <div className="container mx-auto px-4 py-10">
